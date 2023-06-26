@@ -1,0 +1,10 @@
+<div>
+  <input [(ngModel)]="searchtext" (input)="search()" placeholder="Search" />
+  <div>
+    <ul>
+      <li *ngFor="let item of items">
+        <span [innerHTML]="item.name | highlight: searchtext"></span>
+      </li>
+    </ul>
+  </div>
+</div>
